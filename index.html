@@ -294,17 +294,17 @@ body{
         margin-top: 10px;
         margin-bottom: 15px;
     }
-    .footer{
+    #footer{
         width: 100%;
         height: 380px;
         margin-top: 10px;
         background-color: rgb(240,241,247);
     }
-    .footer{
+    #footer{
         display: flex;
         flex-direction: column;
     }
-    .footer div{
+    #footer div{
          height: 23%;
           
     }
@@ -350,46 +350,86 @@ body{
         margin-left: 46%;
         margin-top: 15px;
     }
+    #row1-prod{
+        display: grid;
+        grid-template-columns: repeat(4,23.5%);
+        grid-gap: 2%;
+         background-color:#F0F1F7;
+    }
+    .row1-prod1{
+        height: 380px;
+       background-color: white;
+        margin-bottom: 10px;
+    }
+    .whiter{
+        text-align: center;
+    }
+    .prod-div{
+        width: 80%;
+        margin-left: 10%;
+        height: 75%;
+        
+    }
+    .row1-prod1 img{
+        width: 100%;
+        height: 100%;
+    }
+    #div-line{
+        height: 15px;
+        width: 100%;
+        background-color:#F0F1F7 ;
+    }
+    #prod-div-gif img{
+       margin-top: 15%;
+    }
+    
     </style>
 </head>
 <body>
     <div id="page"></div>
-    <div class="footer">
-        <div class = "footer-1">
-            <div class = "footer-1-1">
-                <p id = "white"class=" heavy">Get Email Deals & Earn Cashback</p>
-                <div>
-                    <input type="text" placeholder="Enter Email Address">
-                    <button >Sign Up</button>
-                </div>
-                <p id = "white">Sign UpLink to this page and tell all of your friends!</p>
+    <div id="div-line"></div>
+    <div id="row1-prod">
+        <div class="row1-prod1 thin whiter">
+            <p>CannabiQuin</p>
+            <div class = "prod-div">
+                <img src="https://img.shop.com/Image/280000/280100/280161/products/1793408106.jpg" alt="">
             </div>
+            
+            <p><a href="">Buy Now</a></p>
         </div>
-        <div class = "footer-2">
-            <div>© 1997-2021 Market America, Inc. or its affiliates. All other designated trademarks, copyrights, and brands are the
-            property of their respective owners.</div>
-            <div>
-                Only Customers will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will receive increased
-                IBV instead of cashback on qualifying purchases.
+        <div class="row1-prod1 thin whiter">
+            <p>Dr. Deedra Mason's Essential 9</p>
+            <div class="prod-div">
+                <img src="https://img.shop.com/Image/homepage/us_eng_essential9_sq1616511735959.jpg" alt="">
             </div>
-            <div><a href="">Privacy Policy | Terms of Use | Advertising Disclosure | Return Policy | Shipping Information</a></div>
+            <p><a href="">View The Essential 9</a></p>
         </div>
-        <div class = "footer-3">
-            <img src="https://www.shop.com/feo-cdn/A/A/pzI6tGZhU.webp" alt="">
-            <img src="https://www.shop.com/feo-cdn/z/b/qA5FJf0J4.webp" alt="">
-            <img src="https://www.shop.com/feo-cdn/q/B/9huVMYs4g.webp" alt="">
-            <img src="https://www.shop.com/feo-cdn/9/y/SggnBCF2o.webp" alt="">
-            <img src="https://www.shop.com/feo-cdn/p/Y/nOXdu76ik.webp" alt="">
-            <img src="https://www.shop.com/feo-cdn/u/P/cg2zbaz_s.webp" alt="">
+        <div class="row1-prod1 thin whiter">
+            <p>Featured One Cart Stores</p>
+            <div id = "drod-div-gif" class="prod-div">
+                <img style="height: 15% ; margin-top: 5%;" src="https://img.shop.com/Image/topbrands/nmlogos_135708.gif" alt="">
+                <img style="height: 15%; width: 78%;margin-top: 5%"src="https://img.shop.com/Image/topbrands/nmlogos_132566.gif" alt="">
+                <img style="height: 15% ; margin-top: 5%;" src="https://img.shop.com/Image/topbrands/nmlogos_135565.gif" alt="">
+                <img style="height: 15% ; margin-top: 5%;" src="https://img.shop.com/Image/topbrands/nmlogos_131565.gif" alt=""></div>
+            <p><a href="">See More Stores</a></p>
         </div>
-        <div class="footer-4">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtsq72EIHLkWqlwmK06t9j90rLxRHGL-HOQ&usqp=CAU" alt="">
+        <div class="row1-prod1 thin whiter">
+            <p>Fall For a New</p>
+            <div class="prod-div">
+                <img src="https://img.shop.com/Image/homepage/shop-usa-89937-fall-lp-sq1631288487119.jpg" alt="">
+            </div>
+            <p><a href="">Explore More</a></p>
+
         </div>
     </div>
+    <div id="footer"></div>
 </body>
 </html>
 <script type = "module">
-    import header1 from "./page1.js"
+    import {header1,footer} from "./page1.js"
+    console.log(footer)
+    let footer1 = document.getElementById('footer')
+    footer1.innerHTML = footer();
     let page = document.getElementById('page');
     page.innerHTML = header1()
 </script>
