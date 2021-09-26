@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./header-footer.css">
+    <style>
+        .signup{
+            width: 100%;
+            height: 330px;
+            width: 70%;
+            margin-top:30px;
+            margin-left: 15%;
+            
+        }
+        .signup-opt{
+           width: 100%;
+            height: 300px;
+            width: 70%;
+            margin-left: 15%; 
+        }
+        .robot{
+            width: 70%;
+            margin-left: 15%; 
+        }
+       
+        .ac-text{
+            font-size: 28px;
+        }
+        .thins{
+            font-size: 16px;
+        }
+        .signup-data{
+            display: grid;
+            grid-template-columns: repeat(2,47%);
+            grid-gap: 6%;
+        }
+         .signup-input{
+            height: 70px;
+           
+        }
+        .sign-inp{
+            height: 40px;
+            width: 97%;
+            margin-top: 4px;
+             outline: none;
+        }
+        .msg-alrt{
+            font-size: 18px;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+        }
+        .checkbox{
+            width: 22px;
+            height: 22px;
+            position: relative;
+            top: 7px;
+        }
+        .opt-inp{
+            width: 46.4%;
+        }
+        .referal{
+            width: 100%;
+            height: 120px;
+            border: solid #F0F1F7;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page"></div>
+    <div class = "signup">
+        <p class = "heavy ac-text">Create an account</p>
+        <p style="margin-top: -18px;" class = "thin thins">* Indicates required field</p>
+        <div class = "signup-data">
+            
+           <div class="signup-input">
+            <div class="thin">First Name*</div>
+               <input class="sign-inp" type="text" placeholder="First Name here" style="font-style: italic;">
+           </div>
+           <div class="signup-input">
+            <div class="thin">Last name*</div>
+            <input class="sign-inp" type="text" placeholder="Last Name here " style="font-style: italic;">
+           </div>
+           <div class="signup-input">
+            <div class="thin">Email address*</div>
+            <input class="sign-inp" type="text" placeholder="yourname@example.com" style="font-style: italic;">
+           </div>
+           <div class=""></div>
+           <div class="signup-input">
+            <div class="thin">Password* (At least 7 characters)</div>
+            <input class="sign-inp" type="text" placeholder="Please enter a minimum of 7 characters" style="font-style: italic;">
+           </div>
+           <div class="signup-input">
+            <div class="thin">Confirm password*</div>
+            <input class="sign-inp" type="text" placeholder="Please re-enter your password" style="font-style: italic;">
+           </div>
+        </div>
+    </div>
+        <div class = "signup-opt">
+            <div class="msg-alrt">Text Message (SMS) Alerts: (Optional)</div>
+            <input class="checkbox" type="checkbox"><span>Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</span>
+            <div class="signup-input" style="margin-top: 28px;">
+                <div class="thin">Nobile Phone</div>
+                <input class="sign-inp opt-inp" type="text" placeholder="Please enter your 10 digit phone number(i.e. 999 999 9999)" style="font-style: italic;">
+            </div>
+            <div class = "referal">
+                <div class="signup-input" style="margin-top: 20px;">
+                <div style="margin-left: 10px;" class="thin">Were you referred by a friend?
+                Enter their email address (Optional)</div>
+                <input style="margin-left: 10px;" class="sign-inp " type="text" placeholder="Please enter your 10 digit phone number(i.e. 999 999 9999)" style="font-style: italic;">
+            </div>
+        </div>
+    </div>
+    <div class = "robot">
+        <p>Your Shop Consultant is SHOP.COM</p>
+        <p class="msg-alrt">Email deals: (Optional)</p>
+        <input class="checkbox" type="checkbox"><span>Do you want to sign up for sweet email offers and discounts from
+            SHOP.COM?</span>
+        <div class="signup-input" style="margin-top: 28px;">
+            <p class="thins">Also, please confirm you are not a robot:</p>
+    </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+<script type="module">
+    import footer from "./footer.js"
+    import navbar from "./navbar.js"
+    let footer1 = document.getElementById('footer')
+    footer1.innerHTML = footer();
+    let page = document.getElementById('page');
+    page.innerHTML = navbar()
+</script>

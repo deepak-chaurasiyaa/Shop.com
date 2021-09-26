@@ -30,3 +30,4 @@ function footer() {
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtsq72EIHLkWqlwmK06t9j90rLxRHGL-HOQ&usqp=CAU" alt="">
         </div>`;
 }
+export default footer;
