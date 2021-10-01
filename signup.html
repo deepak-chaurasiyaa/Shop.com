@@ -114,24 +114,24 @@
             
            <div class="signup-input">
             <div class="thin">First Name*</div>
-               <input class="sign-inp" type="text" placeholder="First Name here" style="font-style: italic;">
+               <input  id="userFirstName" class="sign-inp" type="text" placeholder="First Name here" style="font-style: italic;">
            </div>
            <div class="signup-input">
             <div class="thin">Last name*</div>
-            <input class="sign-inp" type="text" placeholder="Last Name here " style="font-style: italic;">
+            <input  id="userLastName" class="sign-inp" type="text" placeholder="Last Name here " style="font-style: italic;">
            </div>
            <div class="signup-input">
             <div class="thin">Email address*</div>
-            <input class="sign-inp" type="text" placeholder="yourname@example.com" style="font-style: italic;">
+            <input id="userEmail" class="sign-inp" type="text" placeholder="yourname@example.com" style="font-style: italic;">
            </div>
            <div class=""></div>
            <div class="signup-input">
             <div class="thin">Password* (At least 7 characters)</div>
-            <input class="sign-inp" type="text" placeholder="Please enter a minimum of 7 characters" style="font-style: italic;">
+            <input id="userPass" class="sign-inp" type="password" placeholder="Please enter a minimum of 7 characters" style="font-style: italic;">
            </div>
            <div class="signup-input">
             <div class="thin">Confirm password*</div>
-            <input class="sign-inp" type="text" placeholder="Please re-enter your password" style="font-style: italic;">
+            <input class="sign-inp" type="password" placeholder="Please re-enter your password" style="font-style: italic;">
            </div>
         </div>
     </div>
@@ -164,7 +164,7 @@
             </div>
         </div> 
     </div>
-    <button class="sign-inp opt-inp opt-inp1 heavy" type="submit"="style="font-style: italic;">Create your new account</button>
+    <button id = "ssignup" class="sign-inp opt-inp opt-inp1 heavy" type="submit"="style="font-style: italic;">Create your new account</button>
     <p class="opt-inp2">By creating an account, you are agreeing to our Terms of Service and Privacy Policy.</p>
     <div id="footer"></div>
 </body>
@@ -176,4 +176,52 @@
     footer1.innerHTML = footer();
     let page = document.getElementById('page');
     page.innerHTML = navbar()
+       var ssignup = document.getElementById('ssignup');
+      // console.log(ssignup)
+
+      ssignup.addEventListener('click', () => {
+            let userFirstName = document.getElementById('userFirstName').value;
+         
+             let userLastName= document.getElementById('userLastName').value;
+          
+           const userEmail = document.getElementById('userEmail').value;;
+        
+          const userPas = document.getElementById('userPass').value;;
+           if (userFirstName == '')
+              alert('Enter user Name to proceed');
+         
+          else if (userEmail == '')
+              alert('Enter email to proceed');
+          else if (userPas == '')
+              alert('Enter password to proceed');
+
+    
+          else {
+              // combining all details of user
+              let userDetail = {
+                  userFirstName,
+                  userEmail,
+               
+                  userPas
+              }
+               let arr;
+               if (localStorage.getItem('users') == null) 
+                   arr = [];
+               else
+                   arr = JSON.parse(localStorage.getItem('users'));
+               for (let x of arr) {
+                  
+                   if (x.userEmail == userEmail) {
+                       alert('Email already in use')
+                       return;
+                   }
+               }
+               arr.push(userDetail);
+               localStorage.setItem('users', JSON.stringify(arr));
+               alert('You have successfully sign up ,\nLog in! to continue')
+               window.location.href = "sign-in.html"
+            }
+        })
+      
+         
 </script>

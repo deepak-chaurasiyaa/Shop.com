@@ -6,186 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
-      #index-dol{
-          width:100%;
-          height:30px;
-          background-color: #F0F1F7;
-        }
-        #index-dol img{
-            width: 130px;
-            height: 130px;
-            left: 44%;
-            top: -40px;
-            border: 15px solid #F0F1F7  ;
-            border-radius: 50%;
-            position: relative;
-        }
-        #row2-prod{
-            width: 100%;
-            height: 500px;
-            background-color: white;
-        }
-        .prod-cat{
-            font-size: 38px;
-           letter-spacing: normal;
-        }
-        #three-prod{
-            display: grid;
-            grid-template-columns: repeat(3,33.33%);
-            height: 360px;
-            
-            background-color:#F0F1F7 ;
-            
-        }
-        #three-prod div{
-            border: 5px solid #F0F1F7  ;
-            background-color: white;
-            
-        }
-        #three-prod img{
-            width: 70%;
-            height: 70%;
-           
-            margin-bottom: 5px;
-        }
-        .swap-left,.swap-right{
-            position: relative;
-            top: -30%;
-            border-radius: 50%;
-        }
-        .swap-left:hover{
-            background-color: #F0F1F7;
-            cursor: pointer;
-        }
-        .swap-right:hover{
-            background-color: #F0F1F7;
-            cursor: pointer;
-        }
-        .swap-right{
-            left: 88%;
+        .slider1 div {
+  color: white;
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 2px 15px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+.slider-text11 {
+  animation: slide 5s linear infinite;
+}
 
-        }
-        .row3-cat{
-            height: 300px;
-        }
-        .row3-cat-1{
-            display: grid;
-            grid-template-columns: repeat(3,34%);
-            grid-gap: 0.5%;
-            width: 70%;
-            margin-left: 15%;
-          
-            height: 80%;
-            margin-top: 5px;
-        }
-        .row3-cat-1 div{
-            width: 90%;
-            height: 100%;
-           
-        }
+@keyframes slide {
+  0% {
+    margin-top: -300px;
+  }
+  5% {
+    margin-top: -200px;
+  }
+  33% {
+    margin-top: -200px;
+  }
+  38% {
+    margin-top: -100px;
+  }
+  66% {
+    margin-top: -100px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
 
-        #prod-cashback{
-            display: inline;    
-            width: 15px;
-            height: 15px;
-           position: relative;
-           top: 2px;
-        }
-        .prod-p{
-            margin-top: -10px;
-           
-        }
-        #prod-doll{
-            position: relative;
-            top: 3px;
-        }
-      .featured-cat{
-        
-          width: 84%;
-          margin-left: 8%;
-          height: 500px;
-      }
-      #cat-img{
-          width: 150px;
-          border: solid 10px #ced0d6;
-          height: 150px;
-          border-radius: 50%;
-      }
-      #featured-cat{
-          display: grid;
-          grid-template-columns: repeat(6,15%);
-          gap: 2%;
-          text-align: center;
-            cursor: pointer;
-      }
-      
-      .four-prod{
-          height: 300px;
-          /* border: solid; */
-          width: 100%;
-           
-           display: grid;
-          grid-template-columns: repeat(4,24%);
-          gap: 1%;
-          
-          text-align: center;
-            cursor: pointer;
-          background-color:#F0F1F7;
-      }
-      #four-prod2 img{
-          margin-top: 10px;
-        
-      }
-      #five-prod{
-          display: grid;
-          grid-template-columns: repeat(5,19.2%);
-          grid-gap:1%;
-         
-          height: 300px;
-          text-align: center;
-          
-      }
-      #five-prod img{
-          width: 70%;
-          height: 70%;
-          margin-left: 7%;
-      }
-      #five-prod div{
-          border:15px solid #F0F1F7;
-          margin-bottom: 10px;
-      }
-      #six-prod{
-          display: grid;
-          grid-template-columns: repeat(5,19%);
-          grid-gap:1%;
-         
-          height: 350px;
-          text-align: center;
-          
-      }
-      #six-prod img{
-          width: 70%;
-          height: 70%;
-          margin-left: 7%;
-      }
-      #six-prod div{
-          border:15px solid #F0F1F7;
-          margin-bottom: 10px;
-      }
-      #bottom-swap-left,#bottom-swap-right{
-          position: relative;
-          top: 200px;
-      }
-      #bottom-swap-right{
-         left: 92%;
-      }
-      #seven-prod{
-          display: grid;
-          grid-template-columns: repeat(5,19.3%);
-          background-color: white;
-      }
-      
+#index-dol {
+  width: 100%;
+  height: 30px;
+  background-color: #f0f1f7;
+}
+#index-dol img {
+  width: 130px;
+  height: 130px;
+  left: 44%;
+  top: -40px;
+  border: 15px solid #f0f1f7;
+  border-radius: 50%;
+  position: relative;
+}
+#row2-prod {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+}
+.prod-cat {
+  font-size: 38px;
+  letter-spacing: normal;
+}
+#three-prod {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  height: 360px;
+
+  background-color: #f0f1f7;
+}
+#three-prod div {
+  border: 5px solid #f0f1f7;
+  background-color: white;
+}
+#three-prod img {
+  width: 70%;
+  height: 70%;
+
+  margin-bottom: 5px;
+}
+.swap-left,
+.swap-right {
+  position: relative;
+  top: -30%;
+  border-radius: 50%;
+}
+.swap-left:hover {
+  background-color: #f0f1f7;
+  cursor: pointer;
+}
+.swap-right:hover {
+  background-color: #f0f1f7;
+  cursor: pointer;
+}
+.swap-right {
+  left: 88%;
+}
+.row3-cat {
+  height: 300px;
+}
+.row3-cat-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 34%);
+  grid-gap: 0.5%;
+  width: 70%;
+  margin-left: 15%;
+
+  height: 80%;
+  margin-top: 5px;
+}
+.row3-cat-1 div {
+  width: 90%;
+  height: 100%;
+}
     </style>
 </head>
 <body>
@@ -193,7 +129,7 @@
     <div id = "awarded"></div>
     <div id="div-line"></div>
     <div id="row1-prod">
-        <div class="row1-prod1 thin whiter">
+        <div class="row1-prod1 thin whiter" id="row1-prod1">
             <p>CannabiQuin</p>
             <div class = "prod-div">
                 <img src="https://img.shop.com/Image/280000/280100/280161/products/1793408106.jpg" alt="">
@@ -493,20 +429,12 @@
     </div>
     <div id="div-line" style="margin-top: 20px;"></div>
     <div>
-        <div style="margin-top: 20px;  margin-bottom: -40px;" class=" prod-cat thin">Cleaning & Health Have Never Been More Important</div>
+        <div style="margin-top: 20px; margin-top: 10px;" class=" prod-cat thin">Cleaning & Health Have Never Been More Important</div>
         
     </div>
-    <svg class="swap-left" id = "bottom-swap-left" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="feather feather-chevron-left">
-        <polyline points="15 18 9 12 15 6"></polyline>
-    </svg>
-    <svg class="swap-right" id = "bottom-swap-right" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-    <div id="six-prod"></div>
+    <div class="carousel" id="carousel" data-flickity='{ "groupCells": true }'>
+    
+    </div>
     <div id="div-line"></div>
     <div>
         <div style="margin-top: 20px; margin-bottom: 20px; text-align: center;" class=" prod-cat thin">Our Brands</div>
@@ -611,12 +539,12 @@
            }
         fun5prod(arrx, arry,"five-prod")
 
-        let arrx1 = ["https://img.shop.com/Image/210000/214100/214196/products/561800345.jpg?size=300x300","https://www.shop.com/feo-cdn/H/M/JE2hELzCI.webp","https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp","https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp","https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp","https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp","https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp","https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp","https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp","https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp","https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp","https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp","https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp","https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp","https://www.shop.com/feo-cdn/J/d/ABJP_eRqc.webp","https://www.shop.com/feo-cdn/A/L/NSF7CxBv8.webp","https://www.shop.com/feo-cdn/E/t/BUe6ZDjCI.webp","https://www.shop.com/feo-cdn/S/X/JR5rR-Amg.webp","https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp","https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp","https://www.shop.com/feo-cdn/T/a/jGvb2PMno.webp","https://www.shop.com/feo-cdn/s/5/G-VV-dpno.webp","https://www.shop.com/feo-cdn/q/k/5S4Mo5XIk.webp","https://www.shop.com/feo-cdn/u/i/3d1I_YDa0.webp","https://www.shop.com/feo-cdn/L/v/2nuryAnlA.webp"];
-        let arry1 = ["Isotonix Vitamin D with K2","DNA Miracles Isotonix Immune","Clear Maximum Hydration and protection","Isotonix Vitamin C","Clear Maximum Hydration and protection", "Isotonix Vitamin C","Isotonix Bromolin Plus","All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus","Heavy Deauty Concentrate","Isotonix Immune","Isotonix Heavy Deauty","Isotonix Vitamin D with K2","DNA Miracles Isotonix Immune","Clear Maximum Hydration and protection","Isotonix Vitamin C","Clear Maximum Hydration and protection", "Isotonix Vitamin C","Isotonix Bromolin Plus","All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus","Heavy Deauty Concentrate","Isotonix Immune"]
-        fun5prod(arrx1, arry1, "six-prod")
+        // let arrx1 = ["https://img.shop.com/Image/210000/214100/214196/products/561800345.jpg?size=300x300","https://www.shop.com/feo-cdn/H/M/JE2hELzCI.webp","https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp","https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp","https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp","https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp","https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp","https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp","https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp","https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp","https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp","https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp","https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp","https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp","https://www.shop.com/feo-cdn/J/d/ABJP_eRqc.webp","https://www.shop.com/feo-cdn/A/L/NSF7CxBv8.webp","https://www.shop.com/feo-cdn/E/t/BUe6ZDjCI.webp","https://www.shop.com/feo-cdn/S/X/JR5rR-Amg.webp","https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp","https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp","https://www.shop.com/feo-cdn/T/a/jGvb2PMno.webp","https://www.shop.com/feo-cdn/s/5/G-VV-dpno.webp","https://www.shop.com/feo-cdn/q/k/5S4Mo5XIk.webp","https://www.shop.com/feo-cdn/u/i/3d1I_YDa0.webp","https://www.shop.com/feo-cdn/L/v/2nuryAnlA.webp"];
+        // let arry1 = ["Isotonix Vitamin D with K2","DNA Miracles Isotonix Immune","Clear Maximum Hydration and protection","Isotonix Vitamin C","Clear Maximum Hydration and protection", "Isotonix Vitamin C","Isotonix Bromolin Plus","All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus","Heavy Deauty Concentrate","Isotonix Immune","Isotonix Heavy Deauty","Isotonix Vitamin D with K2","DNA Miracles Isotonix Immune","Clear Maximum Hydration and protection","Isotonix Vitamin C","Clear Maximum Hydration and protection", "Isotonix Vitamin C","Isotonix Bromolin Plus","All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus","Heavy Deauty Concentrate","Isotonix Immune"]
+        //fun5prod(arrx1, arry1, "six-prod")
 
 
-         function ourbrand(arr5, arr5n, append) {
+         function adcx(arr5, arr5n, append) {
                 for (let j = 0; j < 5; j++) {
                     let div = document.getElementById(`${append}`);
                     let categ = document.createElement('div');
@@ -632,5 +560,61 @@
             }
            let  brandname = ["HEALTH & NUTRITION","BEAUTY","HOME AND CLEANING","BABY & KIDS","JEWLRY"]
             let ourbrandimg = ["https://img.shop.com/Image/homepage/healthnutirtion1572880380738.jpg","https://img.shop.com/Image/homepage/lipstick1572880828301.jpg","https://img.shop.com/Image/homepage/home_ma1572880950379.jpg","https://img.shop.com/Image/homepage/baby-kids1572881179463.jpg","https://img.shop.com/Image/homepage/1840336563__225x225-img__.jpg"]
-            ourbrand(ourbrandimg,brandname,"seven-prod")
+            adcx(ourbrandimg,brandname,"seven-prod")
+
+             function ourbrand(arr5, arr5n, append) {
+                    for (let j = 0; j < arr5.length; j++) {
+                        let div = document.getElementById(`${append}`);
+                        let categ = document.createElement('div');
+                        categ.className = "carousel-cell";
+                        let img = document.createElement('img');
+                        img.src = arr5[j];
+
+
+                        let p = document.createElement('p');
+                        p.innerHTML = arr5n[j];
+                        var rs = Math.floor((Math.random() * 299) + 149);
+                        var p2 = document.createElement('p')
+                        p2.innerHTML = `<p class="heavy prod-p"><span> Price -
+                        <svg id="prod-doll" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-dollar-sign">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </span>${rs}
+                </p>`
+
+                        let p3 = document.createElement('p');
+                        p3.innerHTML = `<p class="thin prod-p ">3% <span><img style=" margin-left:-0px; display: inline;
+                                width: 15px;
+                                height: 15px;
+                               position: relative;
+                               top: 2px" id="prod-cashback"
+                            src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="">
+                    </span> Cashback
+                </p>`
+
+                        categ.append(img, p, p2, p3)
+                        div.append(categ)
+                    }
+                }
+                let arrx1 = ["https://img.shop.com/Image/210000/214100/214196/products/561800345.jpg?size=300x300", "https://www.shop.com/feo-cdn/H/M/JE2hELzCI.webp", "https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp", "https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp", "https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp", "https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp", "https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp", "https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp", "https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp", "https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp", "https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp", "https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp", "https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp", "https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp", "https://www.shop.com/feo-cdn/J/d/ABJP_eRqc.webp", "https://www.shop.com/feo-cdn/A/L/NSF7CxBv8.webp", "https://www.shop.com/feo-cdn/E/t/BUe6ZDjCI.webp", "https://www.shop.com/feo-cdn/S/X/JR5rR-Amg.webp", "https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp", "https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp", "https://www.shop.com/feo-cdn/T/a/jGvb2PMno.webp", "https://www.shop.com/feo-cdn/s/5/G-VV-dpno.webp", "https://www.shop.com/feo-cdn/q/k/5S4Mo5XIk.webp", "https://www.shop.com/feo-cdn/u/i/3d1I_YDa0.webp", "https://www.shop.com/feo-cdn/L/v/2nuryAnlA.webp"];
+                let arry1 = ["Isotonix Vitamin D with K2", "DNA Miracles Isotonix Immune", "Clear Maximum Hydration and protection", "Isotonix Vitamin C", "Clear Maximum Hydration and protection", "Isotonix Vitamin C", "Isotonix Bromolin Plus", "All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus", "Heavy Deauty Concentrate", "Isotonix Immune", "Isotonix Heavy Deauty", "Isotonix Vitamin D with K2", "DNA Miracles Isotonix Immune", "Clear Maximum Hydration and protection", "Isotonix Vitamin C", "Clear Maximum Hydration and protection", "Isotonix Vitamin C", "Isotonix Bromolin Plus", "All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus", "Heavy Deauty Concentrate", "Isotonix Immune"]
+
+                ourbrand(arrx1, arry1, "carousel")
+
+
+                let ssign = document.getElementById('ssign');
+                ssign.addEventListener('click',()=>{
+                    window.location.href = "sign-in.html"
+                })
+
+                var row1prod1 = document.getElementById('row1-prod1')
+                row1prod1.addEventListener('click',()=>{
+                    window.location.href = "checkout.html"
+                })
+                
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

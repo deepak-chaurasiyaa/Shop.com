@@ -155,13 +155,13 @@
 
             <div class="signup-input">
                 <div class="thin">Email address</div>
-                <input class="sign-inp" type="text" placeholder="yourname@example.com" style="font-style: italic;">
+                <input id="userEmail" class="sign-inp" type="email" placeholder="yourname@example.com" style="font-style: italic;">
             </div>
             
             <div class=""></div>
             <div class="signup-input">
                 <div class="thin">Password (At least 7 characters)</div>
-                <input class="sign-inp" type="text" placeholder="Please enter a minimum of 7 characters"
+                <input id="userPass" class="sign-inp" type="password" placeholder="Please enter a minimum of 7 characters"
                     style="font-style: italic;">
             </div>
             
@@ -195,4 +195,58 @@
     footer1.innerHTML = footer();
     let page = document.getElementById('page');
     page.innerHTML = navbar()
+
+    let createacc = document.getElementById('create-in');
+    createacc.addEventListener('click',()=>{
+        window.location.href = "signup.html"
+    })
+
+    let signc = document.getElementById('sign-in');
+    signc.addEventListener('click',()=>{
+            startLogin()
+         })
+         function startLogin() {
+           
+
+            // accepting values from input 
+            const userEmail = document.getElementById('userEmail').value;
+            const password = document.getElementById('userPass').value;
+
+            // checking if any of the fields are empty
+            if (userEmail == '')
+                alert('Enter user Email to proceed');
+            else if (password == '')
+                alert('Enter pasword to proceed');
+            else {
+                let arr;
+                if (localStorage.getItem('users') == null) //checking if local storage is null
+                    alert('user not found!')
+                else {
+                    var found = false;
+                    arr = JSON.parse(localStorage.getItem('users'));
+                    for (let x of arr) {
+                        // if email exists or not
+                        if (x.userEmail == userEmail) {
+                            // checking password is correct or not
+                            if (x.userPas == password) {
+                                found = true;
+                                window.location.href = './index.html'
+                                // alert('Successfully Log in !')
+                            }
+                            else {
+                                //for incorrect password
+                                alert('password is incorrect');
+                                return;
+                            }
+                        }
+                    }
+                    if (!found)
+                        alert('user not found!')
+                }
+            }
+
+        }
+   
+
+   
 </script>

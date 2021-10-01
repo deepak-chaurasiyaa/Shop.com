@@ -53,7 +53,7 @@ let navbar = () => {
                             </nav>
                         </div>
                         <div class="header-right-bottom-right">
-                            <div class=header-right-bottom-right-logo>
+                            <div id="ssign" class=header-right-bottom-right-logo>
                                 <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="">
                                 <span>SignIn</span>
                             </div>
