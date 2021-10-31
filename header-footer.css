@@ -220,6 +220,7 @@ body {
   text-align: center;
 }
 .awarded-logo {
+  margin-right: 15px;
   margin-left: 75px;
   margin-bottom: -5px;
   width: 30px;
@@ -492,6 +493,7 @@ body {
   left: 88%;
 }
 .row3-cat {
+  margin-top: 80px;
   height: 300px;
 }
 .row3-cat-1 {
@@ -505,6 +507,7 @@ body {
   margin-top: 5px;
 }
 .row3-cat-1 div {
+ 
   width: 90%;
   height: 100%;
 }
