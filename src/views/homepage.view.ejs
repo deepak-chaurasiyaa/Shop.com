@@ -5,128 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./header-footer.css">
+    <link rel="stylesheet" href="static/homepage.css">
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <style>
-        .slider1 div {
-  color: white;
-  height: 50px;
-  margin-bottom: 50px;
-  padding: 2px 15px;
-  text-align: center;
-  box-sizing: border-box;
-  font-family: "Karla", sans-serif;
-}
-.slider-text11 {
-  animation: slide 5s linear infinite;
-}
-
-@keyframes slide {
-  0% {
-    margin-top: -300px;
-  }
-  5% {
-    margin-top: -200px;
-  }
-  33% {
-    margin-top: -200px;
-  }
-  38% {
-    margin-top: -100px;
-  }
-  66% {
-    margin-top: -100px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: 0px;
-  }
-}
-
-#index-dol {
-  width: 100%;
-  height: 30px;
-  background-color: #f0f1f7;
-}
-#index-dol img {
-  width: 130px;
-  height: 130px;
-  left: 44%;
-  top: -40px;
-  border: 15px solid #f0f1f7;
-  border-radius: 50%;
-  position: relative;
-}
-#row2-prod {
-  width: 100%;
-  height: 500px;
-  background-color: white;
-}
-.prod-cat {
-  font-size: 38px;
-  letter-spacing: normal;
-}
-#three-prod {
-  display: grid;
-  grid-template-columns: repeat(3, 33.33%);
-  height: 360px;
-
-  background-color: #f0f1f7;
-}
-#three-prod div {
-  border: 5px solid #f0f1f7;
-  background-color: white;
-}
-#three-prod img {
-  width: 70%;
-  height: 70%;
-
-  margin-bottom: 5px;
-}
-.swap-left,
-.swap-right {
-  position: relative;
-  top: -30%;
-  border-radius: 50%;
-}
-.swap-left:hover {
-  background-color: #f0f1f7;
-  cursor: pointer;
-}
-.swap-right:hover {
-  background-color: #f0f1f7;
-  cursor: pointer;
-}
-.swap-right {
-  left: 88%;
-}
-.row3-cat {
-  height: 300px;
-}
-.row3-cat-1 {
-  display: grid;
-  grid-template-columns: repeat(3, 34%);
-  grid-gap: 0.5%;
-  width: 70%;
-  margin-left: 15%;
-
-  height: 80%;
-  margin-top: 5px;
-}
-.row3-cat-1 div {
-  width: 90%;
-  height: 100%;
-}
-    </style>
+    
 </head>
 <body>
-    <div id="page"></div>
-    <div id = "awarded"></div>
+    <div id="page">
+        <div id = "fixed">
+            <div class="header">
+                <section class=header-main>
+                    <section class="header-left">
+                        <div class="header-logo">
+                            <img src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="">
+                        </div>
+                        <div class="header-menu-button">
+                            <div class="header-menu-logo">
+                                <img src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="">
+                                <span id="header-menu-title">Categories</span>
+                            </div>
+                          
+                        </div>
+                    </section>
+                    <section class="header-right">
+                        <div class="header-right-top">
+                            <div class="header-right-top-left">
+                               <div class="search-product">
+                                <div class="all-departments">All Departmrnts <span><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg></span></div>
+                                <div id="input-line"></div>
+                                <input style = "width: 480px;" type="text" id="input" placeholder="Search SHOP.COM">
+                                <button class="js-search-button header-search__button"><img class="header-search__button-icon"src="https://img.shop.com/Image/resources/images/icon-search-24px.svg" alt="Search"></button>
+                               </div>
+                            </div>
+                            <div class="header-right-top-right">
+                                <img id="imng" src="https://img.shop.com/Image/header2013/shop-usa-93246-bitpay-300x501631650583136.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="header-right-bottom">
+                            <div class="header-right-bottom-left">
+                                <nav aria-label="Department List">
+                                    <ul class="header-right-bottom-list">
+                                        <li style="margin-left: 20px;"  class="header-right-bottom-item"> <a class="header-right__dept-link" href="">Exclusive
+                                                Brands</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link" href="">Stores</a>
+                                        </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">Deals</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">SHOP Travel</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">Departments</a> </li>
+                                        <li class=""> <a class="header-right__dept-link"
+                                                href="">ShopBuddy</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">Locals</a> </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-right-bottom-right">
+                                <div id="ssign" class=header-right-bottom-right-logo>
+                                    <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="">
+                                    <span><a href="/login">SignIn</a></span>
+                                    
+                                </div>
+                                <div class=header-right-bottom-right-logo>
+                                    <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="">
+                                    <span>Orders</span>
+                                </div>
+                                <div class="header-right-bottom-right-logo">
+                                    <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="">
+                                    <span>Cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+            <div class="mini-nav">
+            <div>Your Shop Consultent is <a  class = "heavy" href="">SHOP.COM</a> <span><div class="mini-nav2">
+                <div class = "mini-nav-right">
+                    <p class = "thin">Earn up to <span class = "heavy">50% <span><img class="dollor"
+                                    src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt=""><span class = "heavy">  Cashback  </span><span class = "thin">on eligible purchases. <a class = "heavy" href="">Learn More</a></span></span></span></p>
+                </div>
+            </div></span></div>
+        </div>
+    </div>
+    <div id = "awarded">
+        <div class="awarded">
+            <div>
+                <p class="awarded-price">$49,314,997 <span class="thin awarded-in">awarded in</span>
+                    <img class = "awarded-logo" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="">
+                </p>
+                <span class="heavy awarded-in2">Cashback! <span><button class="heavy aw-learn">Learn More</button></span></span>
+            </div>
+        </div>
+        <img class="halloween" src="https://www.shop.com/feo-cdn/w/p/vkHZyAnQc.webp" alt="">
+    </div>
     <div id="div-line"></div>
     <div id="row1-prod">
         <div class="row1-prod1 thin whiter" id="row1-prod1">
@@ -198,7 +178,7 @@
         <img  src="https://img.shop.com/Image/resources/homepage/shop-homepage-icon.svg" alt="">
     </div>
     <div id="row2-prod">
-        <div style="margin-top: 60px;margin-bottom: 20px;" class="prod-cat thin">Discover New Styles from Layered</div>
+        <div style="margin-top: 80px;"" class="prod-cat thin">Discover New Styles from Layered</div>
         <div id="three-prod">
             <div style="margin-left: 0px;">
                 <svg class="swap-left" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -276,7 +256,7 @@
     </div>
     <div id="div-line"></div>
     <div>
-        <div style="margin-top: 40px; margin-bottom: 20px; text-align: center;"class=" prod-cat thin">Featured Categories</div>
+        <div style="margin-top: 20px;margin-bottom: 20px; text-align: center;"class=" prod-cat thin">Featured Categories</div>
     </div>
     
     <div id="featured-cat" class = "featured-cat">
@@ -356,7 +336,7 @@
    
     <div id="div-line" style="margin-top: 10px;"></div>
     <div id="row2-prod">
-        <div style="margin-top: 70px;margin-bottom: 20px; text-align: center;" class=" prod-cat thin">Stay Healthy with Essential 9!</div>
+        <div style="margin-top: 70px;margin-bottom: 20px;text-align: center;" class=" prod-cat thin">Stay Healthy with Essential 9!</div>
         <div id="three-prod">
             <div style="margin-left: 0px;">
                 <svg class="swap-left" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
@@ -427,7 +407,7 @@
     <div id = "five-prod">
     </div>
     <div>
-        <div style="margin-top: 40px !important;margin-bottom: 20px; text-align: center; margin-top: 10px;" class=" prod-cat thin">Cleaning & Health Have Never Been More Important</div>
+        <div style="margin-top: 30px; margin-bottom: 20px;text-align: center;" class=" prod-cat thin">Cleaning & Health Have Never Been More Important</div>
         
     </div>
     <div class="carousel" id="carousel" data-flickity='{ "groupCells": true }'>
@@ -439,22 +419,46 @@
     </div>
     <div class="four-prod" id = "seven-prod"></div>
     <div id="div-line"></div>
-    <div id="footer"></div>
+    <div id="footer">
+        <div class = "footer-1">
+            <div class = "footer-1-1">
+                <p id = "white"class=" heavy">Get Email Deals & Earn Cashback</p>
+                <div>
+                    <input type="text" placeholder="Enter Email Address">
+                    <button >Sign Up</button>
+                </div>
+                <p id = "white">Sign UpLink to this page and tell all of your friends!</p>
+            </div>
+        </div>
+        <div class = "footer-2">
+            <div>© 1997-2021 Market America, Inc. or its affiliates. All other designated trademarks, copyrights, and brands are the
+            property of their respective owners.</div>
+            <div>
+                Only Customers will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will receive increased
+                IBV instead of cashback on qualifying purchases.
+            </div>
+            <div><a href="">Privacy Policy | Terms of Use | Advertising Disclosure | Return Policy | Shipping Information</a></div>
+        </div>
+        <div class = "footer-3">
+            <img src="https://www.shop.com/feo-cdn/A/A/pzI6tGZhU.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/z/b/qA5FJf0J4.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/q/B/9huVMYs4g.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/9/y/SggnBCF2o.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/p/Y/nOXdu76ik.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/u/P/cg2zbaz_s.webp" alt="">
+        </div>
+        <div class="footer-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtsq72EIHLkWqlwmK06t9j90rLxRHGL-HOQ&usqp=CAU" alt="">
+        </div>
+    </div>
 </body>
-</html>
-<script type = "module">
-    import footer from "./footer.js"
-    import navbar from "./navbar.js"
-    import awarded from "./page1.js"
-    console.log(awarded)
-    let footer1 = document.getElementById('footer')
-    let awards = document.getElementById('awarded')
-    awards.innerHTML = awarded();
-    footer1.innerHTML = footer();
-    let page = document.getElementById('page');
-    page.innerHTML = navbar()
+<script>
+  
+    
+  
+    
      var div = document.getElementById('featured-cat');
-     console.log(div)
+     
     var arr2 = ["WOMEN'S CLOTHING","MEN'S CLOTHING","GIRL'S CLOTHING","BOY'S CLOTHING","ACCESSORIES","SHOES","BEDDING","KITCHEN & DINING","ELECTRONICS","BEAUTY","HEALTH & NUTRITION","KIDS"]
     var arr1 = ["https://www.shop.com/feo-cdn/u/U/ZE_rD6Z8o.webp","https://www.shop.com/feo-cdn/K/F/Qtd-cfXOQ.webp","https://www.shop.com/feo-cdn/R/e/AsXWp9_TE.webp","https://www.shop.com/feo-cdn/v/n/Libc98NtQ.webp","https://www.shop.com/feo-cdn/Z/6/trR8tECpk.webp","https://www.shop.com/feo-cdn/e/Y/iDi6096nM.webp","https://www.shop.com/feo-cdn/J/Z/7mAM1Uy4E.webp","https://www.shop.com/feo-cdn/_/M/mzr2PEm40.webp","https://www.shop.com/feo-cdn/p/h/TP1AMIUY0.webp","https://www.shop.com/feo-cdn/h/M/D3YLvIWH8.webp","https://www.shop.com/feo-cdn/3/X/r2woiNgDY.webp","https://www.shop.com/feo-cdn/y/j/jcY1qVHDA.webp"]
     for(var i = 0; i < arr1.length;i++){
@@ -473,7 +477,7 @@
 
     function fourp(arr1,append){
         var div = document.getElementById(`${append}`)
-        console.log(div)
+    
         for (var i = 0; i < arr1.length; i++) {
 
             let categ = document.createElement('div');
@@ -537,9 +541,6 @@
            }
         fun5prod(arrx, arry,"five-prod")
 
-        // let arrx1 = ["https://img.shop.com/Image/210000/214100/214196/products/561800345.jpg?size=300x300","https://www.shop.com/feo-cdn/H/M/JE2hELzCI.webp","https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp","https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp","https://www.shop.com/feo-cdn/o/A/uVjZv54sQ.webp","https://www.shop.com/feo-cdn/k/Q/S_WGbofz4.webp","https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp","https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp","https://www.shop.com/feo-cdn/P/n/1lyQnQt_c.webp","https://www.shop.com/feo-cdn/_/6/S97dD9YHw.webp","https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp","https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp","https://www.shop.com/feo-cdn/B/t/_2NjOmClY.webp","https://www.shop.com/feo-cdn/T/i/F3wqmmOMc.webp","https://www.shop.com/feo-cdn/J/d/ABJP_eRqc.webp","https://www.shop.com/feo-cdn/A/L/NSF7CxBv8.webp","https://www.shop.com/feo-cdn/E/t/BUe6ZDjCI.webp","https://www.shop.com/feo-cdn/S/X/JR5rR-Amg.webp","https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp","https://www.shop.com/feo-cdn/W/y/ao__9pFHc.webp","https://www.shop.com/feo-cdn/T/a/jGvb2PMno.webp","https://www.shop.com/feo-cdn/s/5/G-VV-dpno.webp","https://www.shop.com/feo-cdn/q/k/5S4Mo5XIk.webp","https://www.shop.com/feo-cdn/u/i/3d1I_YDa0.webp","https://www.shop.com/feo-cdn/L/v/2nuryAnlA.webp"];
-        // let arry1 = ["Isotonix Vitamin D with K2","DNA Miracles Isotonix Immune","Clear Maximum Hydration and protection","Isotonix Vitamin C","Clear Maximum Hydration and protection", "Isotonix Vitamin C","Isotonix Bromolin Plus","All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus","Heavy Deauty Concentrate","Isotonix Immune","Isotonix Heavy Deauty","Isotonix Vitamin D with K2","DNA Miracles Isotonix Immune","Clear Maximum Hydration and protection","Isotonix Vitamin C","Clear Maximum Hydration and protection", "Isotonix Vitamin C","Isotonix Bromolin Plus","All Purpose Netural Concentrate", "Isotonix Vitamin C", "Isotonix Bromolin Plus","Heavy Deauty Concentrate","Isotonix Immune"]
-        //fun5prod(arrx1, arry1, "six-prod")
 
 
          function adcx(arr5, arr5n, append) {
@@ -602,11 +603,10 @@
 
                 ourbrand(arrx1, arry1, "carousel")
 
-
-                let ssign = document.getElementById('ssign');
-                ssign.addEventListener('click',()=>{
-                    window.location.href = "sign-in.html"
-                })
+                // let ssign = document.getElementById('ssign');
+                // ssign.addEventListener('click',()=>{
+                   
+                // })
 
                 var row1prod1 = document.getElementById('row1-prod1')
                 row1prod1.addEventListener('click',()=>{
@@ -616,3 +616,5 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</html>
+

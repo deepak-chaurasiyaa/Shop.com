@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link rel="stylesheet" href="static/homepage.css">
+    <link rel="stylesheet" href="static/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <div id="page">
+        <div id = "fixed">
+            <div class="header">
+                <section class=header-main>
+                    <section class="header-left">
+                        <div class="header-logo">
+                            <img src="https://img.shop.com/Image/resources/logos/shop-logo-us.svg" alt="">
+                        </div>
+                        <div class="header-menu-button">
+                            <div class="header-menu-logo">
+                                <img src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg" alt="">
+                                <span id="header-menu-title">Categories</span>
+                            </div>
+                          
+                        </div>
+                    </section>
+                    <section class="header-right">
+                        <div class="header-right-top">
+                            <div class="header-right-top-left">
+                               <div class="search-product">
+                                <div class="all-departments">All Departmrnts <span><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg></span></div>
+                                <div id="input-line"></div>
+                                <input style = "width: 480px;" type="text" id="input" placeholder="Search SHOP.COM">
+                                <button class="js-search-button header-search__button"><img class="header-search__button-icon"src="https://img.shop.com/Image/resources/images/icon-search-24px.svg" alt="Search"></button>
+                               </div>
+                            </div>
+                            <div class="header-right-top-right">
+                                <img id="imng" src="https://img.shop.com/Image/header2013/shop-usa-93246-bitpay-300x501631650583136.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="header-right-bottom">
+                            <div class="header-right-bottom-left">
+                                <nav aria-label="Department List">
+                                    <ul class="header-right-bottom-list">
+                                        <li style="margin-left: 20px;"  class="header-right-bottom-item"> <a class="header-right__dept-link" href="">Exclusive
+                                                Brands</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link" href="">Stores</a>
+                                        </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">Deals</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">SHOP Travel</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">Departments</a> </li>
+                                        <li class=""> <a class="header-right__dept-link"
+                                                href="">ShopBuddy</a> </li>
+                                        <li class="header-right-bottom-item"> <a class="header-right__dept-link"
+                                                href="">Locals</a> </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-right-bottom-right">
+                                <div id="ssign" class=header-right-bottom-right-logo>
+                                    <img src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg" alt="">
+                                    <span><a href="/login">SignIn</a></span>
+                                    
+                                </div>
+                                <div class=header-right-bottom-right-logo>
+                                    <img src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg" alt="">
+                                    <span>Orders</span>
+                                </div>
+                                <div class="header-right-bottom-right-logo">
+                                    <img src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg" alt="">
+                                    <span>Cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+            
+                <form action="/signup" method="POST">
+                    <div id="form">
+                        <div class = "signup">
+                            <p class = "heavy ac-text">Create an account</p>
+                            <p style="margin-top: -18px;" class = "thin thins">* Indicates required field</p>
+                            <div class = "signup-data">
+                                
+                               <div class="signup-input">
+                                <div class="thin">First Name*</div>
+                                   <input  id="userFirstName"  class="sign-inp" type="text"  placeholder="First Name here" style="font-style: italic" name="userName" required>
+                               </div>
+                               <div class="signup-input">
+                                <div class="thin" >Last name*</div>
+                                <input  id="userLastName" class="sign-inp" type="text" placeholder="Last Name here " style="font-style: italic;">
+                               </div>
+                               <div class="signup-input">
+                                <div class="thin">Email address*</div>
+                                <input id="userEmail"  class="sign-inp" type="text" placeholder="yourname@example.com" style="font-style: italic" name="email" required>
+                               </div>
+                               <div class=""></div>
+                               <div class="signup-input">
+                                <div class="thin">Password* (At least 7 characters)</div>
+                                <input id="userPass"  class="sign-inp" type="password" placeholder="Please enter a minimum of 7 characters" style="font-style: italic"name="password"
+                                required>
+                               </div>
+                               <div class="signup-input">
+                                <div class="thin">Confirm password*</div>
+                                <input class="sign-inp"  type="password" placeholder="Please re-enter your password" style="font-style: italic;">
+                               </div>
+                            </div>
+                        </div>
+                            <div class = "signup-opt">
+                                <div class="msg-alrt heavy">Text Message (SMS) Alerts: (Optional)</div>
+                                <input class="checkbox" type="checkbox"><span>Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</span>
+                                <div class="signup-input" style="margin-top: 28px;">
+                                    <div class="thin">Nobile Phone</div>
+                                    <input class="sign-inp opt-inp" type="text" placeholder="Please enter your 10 digit phone number(i.e. 999 999 9999)" style="font-style: italic"name="mobile" required>
+                                </div>
+                                <div class = "referal">
+                                    <div class="signup-input" style="margin-top: 20px;">
+                                    <div style="margin-left: 10px;" class="thin">Were you referred by a friend?
+                                    Enter their email address (Optional)</div>
+                                    <input style="margin-left: 10px;" class="sign-inp " type="text" placeholder="Please enter your 10 digit phone number(i.e. 999 999 9999)" style="font-style: italic;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "robot">
+                            <p>Your Shop Consultant is SHOP.COM</p>
+                            <p class="msg-alrt heavy">Email deals: (Optional)</p>
+                            <input class="checkbox" type="checkbox"><span>Do you want to sign up for sweet email offers and discounts from
+                                SHOP.COM?</span>
+                            <div class="signup-input" style="margin-top: 28px;">
+                                <p class="heavy">Also, please confirm you are not a robot:</p> 
+                                <div class = "robot-img">
+                                    <input id = "check-robot" class="checkbox " type="checkbox"><span>I am not a robot</span>
+                                   
+                                        <img id = "captcha" class = "captcha" src="data:image/png;base64,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" alt="">
+                                </div>
+                            </div> 
+                        </div>
+                        <button id = "ssignup" class="sign-inp opt-inp opt-inp1 heavy" style="font-style: italic;">Create your new account</button>
+                        <p class="opt-inp2">By creating an account, you are agreeing to our Terms of Service and Privacy Policy.</p>
+                </form>
+                <div id="footer">
+        <div class = "footer-1">
+            <div class = "footer-1-1">
+                <p id = "white"class=" heavy">Get Email Deals & Earn Cashback</p>
+                <div>
+                    <input type="text" placeholder="Enter Email Address">
+                    <button >Sign Up</button>
+                </div>
+                <p id = "white">Sign UpLink to this page and tell all of your friends!</p>
+            </div>
+        </div>
+        <div class = "footer-2">
+            <div>© 1997-2021 Market America, Inc. or its affiliates. All other designated trademarks, copyrights, and brands are the
+            property of their respective owners.</div>
+            <div>
+                Only Customers will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will receive increased
+                IBV instead of cashback on qualifying purchases.
+            </div>
+            <div><a href="">Privacy Policy | Terms of Use | Advertising Disclosure | Return Policy | Shipping Information</a></div>
+        </div>
+        <div class = "footer-3">
+            <img src="https://www.shop.com/feo-cdn/A/A/pzI6tGZhU.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/z/b/qA5FJf0J4.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/q/B/9huVMYs4g.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/9/y/SggnBCF2o.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/p/Y/nOXdu76ik.webp" alt="">
+            <img src="https://www.shop.com/feo-cdn/u/P/cg2zbaz_s.webp" alt="">
+        </div>
+        <div class="footer-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtsq72EIHLkWqlwmK06t9j90rLxRHGL-HOQ&usqp=CAU" alt="">
+        </div>
+    </div>
+            
+        </body>
