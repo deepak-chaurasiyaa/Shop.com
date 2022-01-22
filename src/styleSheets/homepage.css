@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: "Karla", sans-serif;
   }
+
   .slider-text11 {
     animation: slide 5s linear infinite;
   }
